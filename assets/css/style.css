@@ -239,7 +239,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   visibility: hidden;
   padding: 10px 0;
-  background: #fff;
+  background: rgb(14, 13, 13);
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -330,13 +330,14 @@ h1, h2, h3, h4, h5, h6 {
   .get-started-btn {
     margin: 0 48px 0 0;
     padding: 6px 18px;
+    display:none;
   }
 }
 
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  /* right: 15px; */
+  right: 15px;
   top: 15px;
   z-index: 9998;
   border: 0;
@@ -374,7 +375,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   list-style: none;
 }
-
+.mobile-nav ul{
+  background-color: white;
+}
 .mobile-nav a {
   display: block;
   position: relative;
@@ -889,6 +892,7 @@ section {
 }
 
 .services .icon-box:hover {
+  cursor:pointer;
   background: #2b2b2b;
 }
 

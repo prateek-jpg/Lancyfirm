@@ -228,3 +228,29 @@
   });
 
 })(jQuery);
+
+//forms
+document.getElementsByClassName('php-email-form').addEventListener('submit', submitForm);
+function submitForm(e){
+  e.preventDefault();
+
+  // Get values
+  var name = getInputVal('name');
+  var email = getInputVal('email');
+  var subject = getInputVal('subject');
+ 
+  var message = getInputVal('message');
+  console.log(name);
+  document.querySelector('.sent-message').style.display = 'block';
+  
+    // Hide alert after 3 seconds
+    setTimeout(function(){
+      document.querySelector('.sent-message').style.display = 'none';
+    },3000);
+  
+    // Clear form
+    document.getElementsByClassName('php-email-form').reset();
+  }
+  function getInputVal(id){
+    return document.getElementById(id).value;
+  }
